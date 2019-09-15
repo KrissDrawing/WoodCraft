@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     NavMeshAgent agent;
+    public GameObject panel;
+    
 
     void Start()
     {
@@ -21,7 +23,15 @@ public class PlayerMovement : MonoBehaviour
             if(Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 agent.SetDestination(hit.point);
+
+                if(hit.transform.name == "Cube")
+                {
+                    panel.SetActive(true);
+                }
             }
+
+            
+
         }
     }
 }
