@@ -27,11 +27,15 @@ public class PlayerMovement : MonoBehaviour
                 if(hit.transform.name == "Cube")
                 {
                     panel.SetActive(true);
+                    GetComponent<PlayerMovement>().enabled = false;
                 }
             }
-
             
-
         }
+    }
+
+    public void TurnOnMovement()
+    {
+        GetComponent<PlayerMovement>().enabled = true;
     }
 }
