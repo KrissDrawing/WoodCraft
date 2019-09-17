@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+
+    public GameObject detailsPanel;
+
     [Header("List of items sold")]
     [SerializeField] private Sketch[] sketchItem; // array of items
 
@@ -37,6 +40,14 @@ public class Shop : MonoBehaviour
 
     private void OnButtonClick(Sketch item)
     {
-        Debug.Log(item.name);
+        detailsPanel.SetActive(true);
+
+        detailsPanel.transform.GetChild(0).GetComponent<Image>().sprite = item.sprite;
+
+        Transform informationPanel = detailsPanel.transform.GetChild(1).GetComponent<Transform>();
+
+        informationPanel.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.name;  //Do sth with that
+        informationPanel.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.description;
+        informationPanel.GetChild(2).GetComponent<TextMeshProUGUI>().text = item.complexity.ToString();
     }
 }

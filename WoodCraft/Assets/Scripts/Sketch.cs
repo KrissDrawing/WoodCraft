@@ -14,4 +14,7 @@ public class Sketch : ScriptableObject
     public int unlockCost;
     public int complexity;
 
+    public Vector3 minimumDimensions;
+    public string material;
+
 }

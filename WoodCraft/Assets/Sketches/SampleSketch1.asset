@@ -18,3 +18,5 @@ MonoBehaviour:
   qualityPoints: 10
   unlockCost: 10
   complexity: 2
+  minimumDimensions: {x: 50, y: 50, z: 3}
+  material: pine
