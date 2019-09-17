@@ -27,6 +27,7 @@ public class Inventory : MonoBehaviour
 
     public void CashFlow(int amount) {
         money += amount;
+        transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = money.ToString();
     }
 
 

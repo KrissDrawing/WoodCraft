@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rectangle
   description: Dupa Rect
+  unlocked: 1
   sprite: {fileID: 21300000, guid: 8f3ec704bec72ed46b6b1668eb812e6b, type: 3}
   qualityPoints: 15
   unlockCost: 15
   complexity: 4
+  minimumDimensions: {x: 0, y: 0, z: 0}
+  material: 
